@@ -1,3 +1,4 @@
+import { getLanguagePath } from "./languages.js";
 import { program } from "./program.js";
 
 const opts = program.opts();
@@ -10,10 +11,13 @@ switch (isFile) {
       break;
     }
     console.log("from file:", opts.file);
+    // check if path is a valid file
+    const l = getLanguagePath(opts.language);
     break;
   }
   case false: {
     console.log("not from file");
+    const l = getLanguagePath(opts.language);
     break;
   }
 }
