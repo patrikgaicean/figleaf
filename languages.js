@@ -4,7 +4,7 @@ const path = "./languages";
 
 export function getLanguagePath(l) {
   if (!l) {
-    return "english";
+    return "english.csv";
   }
 
   const p = parseLanguageDir(l.toLowerCase());
